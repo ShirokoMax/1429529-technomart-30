@@ -29,7 +29,7 @@
     </section>
 
     <section>
-      <div class="container">al
+      <div class="container">
 
         <p>
           <i>Интернет-магазин <br>
@@ -108,19 +108,21 @@
                 <div></div>
               </div>
 
-              <input type="text" name="price-min" value="0"> -
-              <input type="text" name="price-max" value="30000">
+              <input id="price-min" type="text" name="price-min" value="0">
+              <label for="price-min" class="visually-hidden">Минимальное значение</label> -
+              <input id="price-max" type="text" name="price-max" value="30000">
+              <label for="price-max" class="visually-hidden">Максимальное значение</label>
             </fieldset>
 
             <fieldset>
               <legend>Производители:</legend>
 
               <ul>
-                <li><label><input type="checkbox" name="bosch" checked>BOSCH</label></li>
-                <li><label><input type="checkbox" name="interskol">ИНТЕРСКОЛ</label></li>
-                <li><label><input type="checkbox" name="makita" checked>MAKITA</label></li>
-                <li><label><input type="checkbox" name="dewalt">DEWALT</label></li>
-                <li><label><input type="checkbox" name="hitachi">HITACHI</label></li>
+                <li><label><input type="checkbox" name="bosch" checked>Bosch</label></li>
+                <li><label><input type="checkbox" name="interskol">Интерскол</label></li>
+                <li><label><input type="checkbox" name="makita" checked>Makita</label></li>
+                <li><label><input type="checkbox" name="dewalt">Dewalt</label></li>
+                <li><label><input type="checkbox" name="hitachi">Hitachi</label></li>
               </ul>
             </fieldset>
 
@@ -128,8 +130,8 @@
               <legend>Питание:</legend>
 
               <ul>
-                <li><label><input type="radio" name="power" value="battery" checked>АККУМУЛЯТОРНЫЕ</label></li>
-                <li><label><input type="radio" name="power" value="electrical-network">СЕТЕВЫЕ</label></li>
+                <li><label><input type="radio" name="power" value="battery" checked>Аккумуляторные</label></li>
+                <li><label><input type="radio" name="power" value="electrical-network">Сетевые</label></li>
               </ul>
             </fieldset>
 
