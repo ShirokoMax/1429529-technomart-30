@@ -60,6 +60,7 @@
   --special-white: #f3f7f9;
   --special-lightwhite: #f1f5f7;
   --special-pink: #f9f5f0;
+  --special-lightpink: #f7f3ec;
   --special-lightgreen: #5fbb2d;
   --special-green: #518534;
 }
@@ -88,6 +89,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+fieldset {
+  border: none;
 }
 
 .button {
@@ -147,6 +152,14 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.user-navigation .checkout {
+  background-color: var(--primary-green);
+}
+
+.user-navigation .cart-filled {
+  background-color: var(--primary-red);
+}
+
 .main-header-slogan {
   color: var(--primary-red);
   font-size: 16px;
@@ -166,7 +179,8 @@ img {
 }
 
 .login-link,
-.sign-up-link {
+.sign-up-link,
+.user-name {
   color: var(--primary-black);
   font-size: 21px;
   line-height: 21px;
@@ -178,7 +192,22 @@ img {
 }
 
 .login-link:active,
-.sign-up-link:active {
+.sign-up-link:active,
+.user-name:active {
+  color: var(--special-lightgray);
+}
+
+.user-menu a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--secondary-blue);
+}
+
+.user-menu a:hover {
+  color: var(--primary-red);
+}
+
+.user-menu a:active {
   color: var(--special-lightgray);
 }
 
@@ -252,17 +281,17 @@ img {
   text-transform: uppercase;
 }
 
-/* Popular goods */
+/* Goods */
 
-.popular-goods-header {
+.goods-header {
   background-color: var(--special-pink);
 }
 
-.popular-goods-header .title {
+.goods-header .title {
   color: var(--secondary-blue);
 }
 
-.popular-goods-item {
+.goods-item {
   font-family: 'PT Sans';
   font-weight: 700;
   font-size: 17px;
@@ -272,38 +301,38 @@ img {
   border-color: #eaeaea;
 }
 
-.popular-goods-item-title {
+.goods-item-title {
   font-size: 18px;
   line-height: 20px;
 }
 
-.popular-goods-list .old-price {
+.goods-list .old-price {
   color: var(--secondary-gray);
   text-decoration: line-through;
 }
 
-.popular-goods-list .new-price {
+.goods-list .new-price {
   color: var(--primary-white);
   background-color: var(--primary-red);
   padding: 8px 32px;
 }
 
-.popular-goods-list .button-buy {
+.goods-list .button-buy {
   font-family: 'Cuprum';
   background-color: var(--primary-green);
   box-shadow: inset 0px -3px 0px #367315;
   border-radius: 2px;
 }
 
-.popular-goods-list .button-buy:hover {
+.goods-list .button-buy:hover {
   background-color: var(--special-lightgreen);
 }
 
-.popular-goods-list .button-buy:active {
+.goods-list .button-buy:active {
   background-color: var(--special-green);
 }
 
-.popular-goods-list .button-bookmark {
+.goods-list .button-bookmark {
   font-family: 'Cuprum';
   color: var(--secondary-blue);
   background-color: var(--primary-white);
@@ -311,31 +340,31 @@ img {
   border-radius: 2px;
 }
 
-.popular-goods-list .button-bookmark:hover {
+.goods-list .button-bookmark:hover {
   background-color: transparent;
   border-color: var(--secondary-blue);
 }
 
-.popular-goods-list .button-bookmark:active {
+.goods-list .button-bookmark:active {
   background-color: transparent;
   border-color: rgba(50, 66, 92, 0.5);
 }
 
-/* Popular manufacturers */
+/* Manufacturers */
 
-.popular-manufacturers-header .title {
+.manufacturers-header .title {
   color: var(--secondary-blue);
 }
 
-.popular-manufacturers-header {
+.manufacturers-header {
   background-color: var(--special-pink);
 }
 
-.popular-manufacturers-list a:hover {
+.manufacturers-list a:hover {
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
-.popular-manufacturers-list a:active {
+.manufacturers-list a:active {
   opacity: 0.5;
 }
 
@@ -364,12 +393,9 @@ img {
   background-color: var(--primary-dark-blue);
 }
 
-.services-item-button-active {
-  font-size: 21px;
-  line-height: 30px;
+.services-item-button.button-active {
   color: var(--secondary-blue);
   background-color: var(--primary-white);
-  border: none;
   box-shadow: 0px 1px 0px #FFFFFF;
 }
 
@@ -445,4 +471,177 @@ img {
 .main-footer-feedback a:active {
   text-decoration: none;
   color: var(--primary-red);
+}
+
+/* Catalog: Content Header */
+
+.breadcrumbs {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans';
+  text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  color: var(--primary-black);
+}
+
+.content-title {
+  background-color: var(--special-lightwhite);
+  padding: 10px 30px 10px 30px; /* Потом переделать */
+}
+
+.content-title .title {
+  color: var(--secondary-blue);
+}
+
+/* Catalog: Filter */
+
+.filter {
+  font-family: 'PT Sans';
+  text-transform: uppercase;
+}
+
+.filter-header {
+  background-color: var(--special-lightpink);
+}
+
+.filter-title {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.filter-price-title,
+.filter-manufacturers-title,
+.filter-power-title {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.filter-price-range {
+  background-color: var(--special-lightpink);
+  padding: 20px; /* Позднее переделать */
+  margin-bottom: 10px; /* Позднее удалить */
+}
+
+.filter-price-values {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.filter-price-min,
+.filter-price-max {
+  background-color: var(--special-lightpink);
+}
+
+.filter-price-min input,
+.filter-price-max input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+.filter-manufacturers-list,
+.filter-power-list {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.filter-button-submit {
+  font-size: 13px;
+  line-height: 18px;
+  border: 1px solid #e5e5e5;
+  background-color: inherit;
+  text-transform: uppercase;
+}
+
+.filter-button-submit:hover {
+  border-color: var(--special-lightgray);
+}
+
+/* Catalog: Sorting */
+
+.sorting {
+  font-family: 'PT Sans';
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--special-lightpink);
+}
+
+.sorting-title {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.sorting-list button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  line-height: 18px;
+  color: #b3b3b3;
+  text-decoration-color: var(--primary-red);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+}
+
+.sorting-list button:hover {
+  color: var(--primary-black);
+  text-decoration-style: solid;
+}
+
+.sorting-list button.button-active {
+  opacity: 1;
+  text-decoration: none;
+  color: var(--primary-red);
+}
+
+/* Catalog: Goods Pagination */
+
+.goods-pagination-item {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.goods-pagination-item a {
+  color: var(--primary-black);
+}
+
+.goods-pagination-item:hover {
+  border: 1px solid var(--special-lightgray);
+}
+
+.goods-pagination-item:active {
+  border: 1px solid var(--primary-red);
+}
+
+.goods-pagination-item.pagination-active {
+  background-color: var(--primary-red);
+  border: none;
+}
+
+.goods-pagination-item.pagination-active a {
+  color: var(--primary-white);
+}
+
+/* Catalog: About Drills */
+
+.about-drills {
+  background-color: var(--special-lightwhite);
+}
+
+.about-drills-content {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
 }
