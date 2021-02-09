@@ -52,7 +52,7 @@
         <a class="sign-up-link" href="">Регистрация</a>
       </div>
 
-      <nav class="main-navigation">
+      <nav class="container main-navigation">
         <ul class="list site-navigation">
           <li><a>Главная</a></li>
           <li><a href="">Компания</a></li>
@@ -103,19 +103,20 @@
             <a class="button features-button" href="">Бесплатно</a>
             <img src="img/icons/delivery.svg" width="78" height="63" alt="Автомобиль доставки">
           </li>
+          <li class="features-slider">
+            <div>
+              <p class="features-slider-title">Перфораторы</p>
+              <p class="features-slider-subtitle">Настоящие мужские игрушки</p>
+              <img src="img/advantages-1.jpg" width="620" height="266"
+                alt="Рабочий выполняет отверстие в бетонной стене при помощи перфоратора BOSCH">
+              <img hidden src="img/advantages-2.jpg" width="620" height="266"
+                alt="Рабочий выполняет отверстие в кирпичной стене при помощи дрели BOSCH ">
+              <button type="button" aria-label="Предыдущий слайд"></button>
+              <button type="button" aria-label="Следующий слайд"></button>
+              <a class="button slider-button" href="catalog.html">Открыть каталог</a>
+            </div>
+          </li>
         </ul>
-
-        <div class="features-slider">
-          <p class="features-slider-title">Перфораторы</p>
-          <p class="features-slider-subtitle">Настоящие мужские игрушки</p>
-          <img src="img/advantages-1.jpg" width="620" height="266"
-            alt="Рабочий выполняет отверстие в бетонной стене при помощи перфоратора BOSCH">
-          <img src="img/advantages-2.jpg" width="620" height="266"
-            alt="Рабочий выполняет отверстие в кирпичной стене при помощи дрели BOSCH ">
-          <button type="button" aria-label="Предыдущий слайд"></button>
-          <button type="button" aria-label="Следующий слайд"></button>
-          <a class="button slider-button" href="catalog.html">Открыть каталог</a>
-        </div>
 
       </div>
     </section>
@@ -207,33 +208,36 @@
     <section class="services">
       <div class="container">
 
-        <h2 class="title">Сервисы</h2>
-
-        <p class="services-content">
-          Хороший интернет-магазин отличается от плохого не только ценами!
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-
-        <ul class="list services-list">
-          <li><button class="services-item-button button-active" type="button">Доставка</button></li>
-          <li><button class="services-item-button" type="button">Гарантия</button></li>
-          <li><button class="services-item-button" type="button">Кредит</button></li>
-        </ul>
-
-        <div>
-          <p class="title services-list-title">Доставка</p>
-          <p class="services-list-content">Мы с удовольствием доставим ваш товар прямо<br>
-            к вашему подъезду совершенно бесплатно!<br>
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!
+        <div class="services-header">
+          <h2 class="title">Сервисы</h2>
+          <p class="services-content">
+            Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
+        </div>
+
+        <div class="services-columns">
+          <ul class="list services-list">
+            <li><button class="services-item-button button-active" type="button">Доставка</button></li>
+            <li><button class="services-item-button" type="button">Гарантия</button></li>
+            <li><button class="services-item-button" type="button">Кредит</button></li>
+          </ul>
+
+          <div>
+            <p class="title services-list-title">Доставка</p>
+            <p class="services-list-content">Мы с удовольствием доставим ваш товар прямо<br>
+              к вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!
+            </p>
+          </div>
         </div>
 
       </div>
     </section>
 
     <div>
-      <div class="container">
+      <div class="container index-columns">
 
         <section class="about">
 
@@ -307,7 +311,7 @@
     </section>
 
     <section class="main-footer-submenu">
-      <div class="container">
+      <div class="container footer-submenu-columns">
 
         <p class="main-footer-copyright">
           © 2010–2019 Компания «Техномарт»
@@ -323,7 +327,8 @@
         <p class="main-footer-feedback">
           Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-
+        </p>
+        <p class="main-footer-developed">
           Разработано —
           <a href="https://htmlacademy.ru">htmlacademy.ru</a>
         </p>
