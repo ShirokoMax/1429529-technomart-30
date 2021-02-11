@@ -162,7 +162,7 @@ fieldset {
   grid-gap: 20px;
 }
 
-.features-slider {
+.slider {
   grid-column: 1 / 3;
   grid-row: 2 / 4;
 }
@@ -385,6 +385,11 @@ fieldset {
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.features-slider-subtitle {
+  margin: 0;
 }
 
 /* Goods */
