@@ -128,6 +128,10 @@ fieldset {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -177,7 +181,7 @@ fieldset {
 .goods-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 318px;
+  grid-template-rows: 1fr;
   column-gap: 20px;
 }
 
@@ -236,6 +240,37 @@ fieldset {
 
 .main-footer-developed {
   grid-column: -1 / -2;
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-areas:
+  "filter sorting"
+  "filter results";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 38px 1fr;
+  column-gap: 20px;
+  row-gap: 28px;
+}
+
+.filter {
+  grid-area: filter;
+}
+
+.sorting {
+  grid-area: sorting;
+}
+
+.goods-catalog {
+  grid-area: results;
+}
+
+.goods-list-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 18px;
+  margin-bottom: 48px;
 }
 
 /* Header */
@@ -415,6 +450,7 @@ fieldset {
   border-width: 1px;
   border-style: solid;
   border-color: #eaeaea;
+  height: 318px;
 }
 
 .goods-item-title {
@@ -422,33 +458,39 @@ fieldset {
   line-height: 20px;
 }
 
-.goods-list .old-price {
+.goods-list .old-price,
+.goods-list-catalog .old-price {
   color: var(--secondary-gray);
   text-decoration: line-through;
 }
 
-.goods-list .new-price {
+.goods-list .new-price,
+.goods-list-catalog .new-price {
   color: var(--primary-white);
   background-color: var(--primary-red);
   padding: 8px 32px;
 }
 
-.goods-list .button-buy {
+.goods-list .button-buy,
+.goods-list-catalog .button-buy {
   font-family: 'Cuprum';
   background-color: var(--primary-green);
   box-shadow: inset 0px -3px 0px #367315;
   border-radius: 2px;
 }
 
-.goods-list .button-buy:hover {
+.goods-list .button-buy:hover,
+.goods-list-catalog .button-buy:hover {
   background-color: var(--special-lightgreen);
 }
 
-.goods-list .button-buy:active {
+.goods-list .button-buy:active,
+.goods-list-catalog .button-buy:active {
   background-color: var(--special-green);
 }
 
-.goods-list .button-bookmark {
+.goods-list .button-bookmark,
+.goods-list-catalog .button-bookmark {
   font-family: 'Cuprum';
   color: var(--secondary-blue);
   background-color: var(--primary-white);
@@ -456,12 +498,14 @@ fieldset {
   border-radius: 2px;
 }
 
-.goods-list .button-bookmark:hover {
+.goods-list .button-bookmark:hover,
+.goods-list-catalog .button-bookmark:hover {
   background-color: transparent;
   border-color: var(--secondary-blue);
 }
 
-.goods-list .button-bookmark:active {
+.goods-list .button-bookmark:active,
+.goods-list-catalog .button-bookmark:active {
   background-color: transparent;
   border-color: rgba(50, 66, 92, 0.5);
 }
@@ -617,7 +661,8 @@ fieldset {
 
 .content-title {
   background-color: var(--special-lightwhite);
-  padding: 10px 30px 10px 30px; /* Потом переделать */
+  padding: 30px;
+  margin-bottom: 20px;
 }
 
 .content-title .title {
@@ -631,14 +676,22 @@ fieldset {
   text-transform: uppercase;
 }
 
+.filter fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 .filter-header {
   background-color: var(--special-lightpink);
+  height: 38px;
+  margin-bottom: 14px;
 }
 
 .filter-title {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  margin: 0;
 }
 
 .filter-subtitle {
@@ -676,12 +729,24 @@ fieldset {
   line-height: 19px;
 }
 
+.filter-manufacturers-list li {
+  margin-bottom: 20px;
+}
+
+.filter-power-list li {
+  margin-bottom: 23px;
+}
+
 .filter-button-submit {
   font-size: 13px;
   line-height: 18px;
   border: 1px solid #e5e5e5;
   background-color: inherit;
   text-transform: uppercase;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 14px;
 }
 
 .filter-button-submit:hover {
@@ -696,12 +761,19 @@ fieldset {
   font-size: 13px;
   line-height: 18px;
   background-color: var(--special-lightpink);
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Потом доделать до вида как на макете */
 }
 
 .sorting-title {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+}
+
+.sorting-list li {
+  display: inline-block;
 }
 
 .sorting-list button {
@@ -730,6 +802,12 @@ fieldset {
 
 /* Catalog: Goods Pagination */
 
+.goods-pagination {
+  display: block;
+  margin-bottom: 59px;
+  font-size: 0px;
+}
+
 .goods-pagination-item {
   display: inline-block;
   padding: 10px 15px;
@@ -738,6 +816,7 @@ fieldset {
   text-transform: uppercase;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
+  margin-right: 10px;
 }
 
 .goods-pagination-item a {
@@ -757,6 +836,11 @@ fieldset {
   border: none;
 }
 
+.goods-pagination-item.pagination-next {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
 .goods-pagination-item.pagination-active a {
   color: var(--primary-white);
 }
@@ -765,10 +849,18 @@ fieldset {
 
 .about-drills {
   background-color: var(--special-lightwhite);
+  padding-top: 64px;
+  padding-bottom: 68px;
+}
+
+.about-drills .title {
+  margin-bottom: 25px;
 }
 
 .about-drills-content {
   font-family: 'PT Sans';
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
+  white-space: pre-line;
 }
