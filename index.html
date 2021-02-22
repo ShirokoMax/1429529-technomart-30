@@ -20,7 +20,7 @@
 
         <a class="main-header-logo">Техномарт</a>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="main-header-search" action="https://echo.htmlacademy.ru" method="get">
           <label for="search">Поиск:</label>
           <input id="search" type="search" placeholder="">
         </form>
@@ -35,7 +35,7 @@
     </section>
 
     <section>
-      <div class="container">
+      <div class="container main-header-submenu">
 
         <p class="main-header-slogan">
           <i>Интернет-магазин <br>
@@ -48,8 +48,10 @@
           <span class="main-header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
 
-        <a class="login-link" href="">Войти</a>
-        <a class="sign-up-link" href="">Регистрация</a>
+        <div>
+          <a class="login-link" href="">Войти</a>
+          <a class="sign-up-link" href="">Регистрация</a>
+        </div>
       </div>
 
       <nav class="container main-navigation">
@@ -79,29 +81,49 @@
 
         <section class="list features-list">
           <article class="features-materials">
-            <h3>Материалы</h3>
-            <a class="button features-button" href="">На любой вкус</a>
-            <img src="img/icons/bucket.svg" width="44" height="65" alt="Ведро с краской">
+            <div class="features-content">
+              <h3>Материалы</h3>
+              <a class="button features-button" href="">На любой вкус</a>
+            </div>
+            <div class="features-img">
+              <img src="img/icons/bucket.svg" width="44" height="65" alt="Ведро с краской">
+            </div>
           </article>
           <article class="features-tools">
-            <h3>Инструмент</h3>
-            <a class="button features-button" href="">На все случаи</a>
-            <img src="img/icons/drill.svg" width="75" height="61" alt="Перфоратор">
+            <div class="features-content">
+              <h3>Инструмент</h3>
+              <a class="button features-button" href="">На все случаи</a>
+            </div>
+            <div class="features-img">
+              <img src="img/icons/drill.svg" width="75" height="61" alt="Перфоратор">
+            </div>
           </article>
           <article class="features-technics">
-            <h3>Техника</h3>
-            <a class="button features-button" href="">Для стройки</a>
-            <img src="img/icons/tractor.svg" width="78" height="62" alt="Трактор">
+            <div class="features-content">
+              <h3>Техника</h3>
+              <a class="button features-button" href="">Для стройки</a>
+            </div>
+            <div class="features-img">
+              <img src="img/icons/tractor.svg" width="78" height="62" alt="Трактор">
+            </div>
           </article>
           <article class="features-discount">
-            <h3>Скидки 50%</h3>
-            <a class="button features-button" href="">На 350 товаров</a>
-            <img src="img/icons/cart-big.svg" width="59" height="72" alt="Тележка с покупками">
+            <div class="features-content">
+              <h3>Скидки 50%</h3>
+              <a class="button features-button" href="">На 350 товаров</a>
+            </div>
+            <div class="features-img">
+              <img src="img/icons/cart-big.svg" width="59" height="72" alt="Тележка с покупками">
+            </div>
           </article>
           <article class="features-delivery">
-            <h3>Доставка</h3>
-            <a class="button features-button" href="">Бесплатно</a>
-            <img src="img/icons/delivery.svg" width="78" height="63" alt="Автомобиль доставки">
+            <div class="features-content">
+              <h3>Доставка</h3>
+              <a class="button features-button" href="">Бесплатно</a>
+            </div>
+            <div class="features-img">
+              <img src="img/icons/delivery.svg" width="78" height="63" alt="Автомобиль доставки">
+            </div>
           </article>
           <div class="slider">
             <button type="button" aria-label="Предыдущий слайд"></button>
@@ -138,48 +160,48 @@
         <ul class="list goods-list">
           <li class="goods-item">
             <h3 class="goods-item-title">Перфоратор BOSCH BFG 9000</h3>
-            <div>
+            <div class="goods-item-img">
               <img src="img/drills/Bosch BFG 9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
             </div>
             <div>
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-bookmark" type="button">В закладки</button>
+              <button class="button button-buy hidden" type="button">Купить</button>
+              <button class="button button-bookmark hidden" type="button">В закладки</button>
             </div>
             <span class="old-price">32500 Р.</span>
             <span class="new-price">25500 Р.</span>
           </li>
           <li class="goods-item">
             <h3 class="goods-item-title">Перфоратор BOSCH BFG 3000</h3>
-            <div>
+            <div class="goods-item-img">
               <img src="img/drills/Bosch BFG 3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
             </div>
             <div>
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-bookmark" type="button">В закладки</button>
+              <button class="button button-buy hidden" type="button">Купить</button>
+              <button class="button button-bookmark hidden" type="button">В закладки</button>
             </div>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span>
           </li>
           <li class="goods-item">
             <h3 class="goods-item-title">Перфоратор BOSCH BFG 6000</h3>
-            <div>
+            <div class="goods-item-img">
               <img src="img/drills/Bosch BFG 6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             </div>
             <div>
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-bookmark" type="button">В закладки</button>
+              <button class="button button-buy hidden" type="button">Купить</button>
+              <button class="button button-bookmark hidden" type="button">В закладки</button>
             </div>
             <span class="old-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span>
           </li>
           <li class="goods-item">
             <h3 class="goods-item-title">Перфоратор BOSCH BFG 2000</h3>
-            <div>
+            <div class="goods-item-img">
               <img src="img/drills/Bosch BFG 2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             </div>
             <div>
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-bookmark" type="button">В закладки</button>
+              <button class="button button-buy hidden" type="button">Купить</button>
+              <button class="button button-bookmark hidden" type="button">В закладки</button>
             </div>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">12500 Р.</span>
@@ -260,13 +282,13 @@
             <p>Мы можем доставить ваш товар в самые отдаленные точки России!</p>
             <p>Техномарт работает со многими транспортными компаниями:</p>
           </div>
-          <ul class="about-transport-companies-list">
+          <ul class="about-transport-companies">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
 
-          <a class="button" href="">Подробнее о компании</a>
+          <a class="button about-button" href="">Подробнее о компании</a>
 
         </section>
 
@@ -279,7 +301,7 @@
             заехав в наш офис:
           </p>
 
-          <a href="">
+          <a class="contacts-map" href="">
             <img src="img/map.jpg" width="300" height="158" alt="Карта с расположением магазина Техномарт">
           </a>
 
