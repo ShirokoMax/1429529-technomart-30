@@ -561,6 +561,7 @@ fieldset {
   flex-direction: column;
   min-height: 318px;
   padding-right: 18px;
+  padding-bottom: 21px;
   padding-left: 18px;
   font-family: 'PT Sans';
   font-weight: 700;
@@ -585,6 +586,10 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.new-price {
+  margin-top: auto;
 }
 
 .goods-list .old-price,
@@ -872,10 +877,21 @@ fieldset {
   line-height: 18px;
   font-family: 'PT Sans';
   text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs a {
   color: var(--primary-black);
+}
+
+.breadcrumbs > li {
+  display: inline-block;
+  margin-left: 40px; /* Переделать позднее */
+}
+
+.breadcrumbs > li:first-child {
+  margin-left: 0; /* Переделать позднее */
 }
 
 .content-title {
@@ -901,9 +917,13 @@ fieldset {
 }
 
 .filter-header {
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
   background-color: var(--special-lightpink);
   height: 38px;
   margin-bottom: 14px;
+  border-radius: 2px;
 }
 
 .filter-title {
@@ -917,26 +937,44 @@ fieldset {
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
+  margin-bottom: 11px;
 }
 
 .filter-price-range {
   background-color: var(--special-lightpink);
-  padding: 20px; /* Позднее переделать */
-  margin-bottom: 10px; /* Позднее удалить */
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 
 .filter-price-values {
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
   font-size: 17px;
   line-height: 18px;
+  margin-bottom: 25px;
+}
+
+.filter-price-values > span {
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .filter-price-min,
 .filter-price-max {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
   background-color: var(--special-lightpink);
 }
 
 .filter-price-min input,
 .filter-price-max input {
+  width: 100%;
+  text-align: center;
   border: none;
   outline: none;
   background-color: inherit;
@@ -980,9 +1018,13 @@ fieldset {
   font-size: 13px;
   line-height: 18px;
   background-color: var(--special-lightpink);
+  border-radius: 2px;
+  padding-right: 16px;
+  padding-left: 19px;
   display: flex;
   flex-direction: row;
-  align-items: center; /* Потом доделать до вида как на макете */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sorting-title {
