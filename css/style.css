@@ -1076,15 +1076,34 @@ fieldset {
   padding-bottom: 100px;
 }
 
+.services-list {
+  position: relative;
+}
+
+.services-list::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 10px;
+  height: 280px;
+  background-image: url("/img/line.png");
+  background-repeat: no-repeat;
+}
+
 .services-content,
 .services-list-content {
   font-family: 'PT Sans';
+  margin-top: 30px;
 }
 
 .services-item-button {
   font-size: 21px;
   line-height: 30px;
+  font-weight: 700;
+  text-align: left;
   color: var(--primary-white);
+  padding-left: 22px;
   background-color: var(--secondary-blue);
   border: none;
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
@@ -1754,4 +1773,150 @@ fieldset {
   line-height: 24px;
   margin: 0;
   white-space: pre-line;
+}
+
+/* Modal */
+
+.modal {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: var(--primary-white);
+  border-top: 7px solid  var(--primary-red);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 23px;
+  right: 13px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 4px;
+  background-color: var(--primary-red);
+  border-radius: 1.5px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/* Modal Feedback */
+
+.modal-feedback {
+  display: none;
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+  padding-top: 38px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--primary-black);
+  border: 2px solid var(--special-lightgray);
+  border-radius: 2px;
+}
+
+.feedback-form input {
+  width: 220px;
+  padding: 6px 8px 6px 12px;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: var(--secondary-gray);
+  opacity: 1;
+}
+
+.feedback-form input:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
+  color: var(--secondary-gray);
+}
+
+.feedback-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.feedback-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 13px;
+}
+
+.feedback-input-wrapper label {
+  margin-bottom: 11px;
+}
+
+.feedback-textarea-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feedback-textarea-wrapper label {
+  margin-bottom: 11px;
+}
+
+.feedback-textarea-wrapper textarea {
+  resize: none;
+  min-height: 114px;
+  padding: 6px 12px 6px 12px;
+  margin-bottom: 37px;
+}
+
+.feedback-submit-wrapper {
+  background-color: #f4f4f4;
+  padding: 37px 80px 37px 80px;
+}
+
+.feedback-form-submit {
+  width: 100%;
+  border: none;
+}
+
+/* Modal Map */
+
+.modal-map {
+  display: none;
+  width: 940px;
+  height: 440px;
+  border-top: 7px solid  var(--primary-red);
+}
+
+.modal-map img {
+  display: block;
+}
+
+.modal-map iframe {
+  border: none;
 }
