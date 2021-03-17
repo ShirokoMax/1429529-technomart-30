@@ -105,6 +105,7 @@ fieldset {
   text-transform: uppercase;
   padding: 10px;
   outline: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -780,6 +781,7 @@ fieldset {
   padding: 0;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .prev-slide-button {
@@ -1109,6 +1111,7 @@ fieldset {
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
   width: 100%;
   height: 62px;
+  cursor: pointer;
 }
 
 .services-item-button:hover {
@@ -1723,6 +1726,7 @@ fieldset {
   border: 1px solid #e5e5e5;
   border-radius: 2px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .goods-pagination-item:last-child {
@@ -1744,6 +1748,7 @@ fieldset {
 .goods-pagination-item.pagination-active {
   background-color: var(--primary-red);
   border: none;
+  cursor: default;
 }
 
 .goods-pagination-item.pagination-next {
@@ -1910,7 +1915,6 @@ fieldset {
   display: none;
   width: 940px;
   height: 440px;
-  border-top: 7px solid  var(--primary-red);
 }
 
 .modal-map img {
@@ -1919,4 +1923,65 @@ fieldset {
 
 .modal-map iframe {
   border: none;
+}
+
+/* Catalog: Modal Product Added */
+
+.modal-product-added {
+  display: none;
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+}
+
+.product-added-content {
+  position: relative;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 66px;
+  margin-bottom: 68px;
+}
+
+.product-added-content::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 81px;
+  width: 66px;
+  height: 66px;
+  background-image: url("/img/icons/icon-mark.svg");
+  background-repeat: no-repeat;
+}
+
+.product-added-wrapper {
+  background-color: #f1f1f1;
+  padding: 37px 112px 37px 114px;
+}
+
+.product-added-checkout,
+.product-added-continue {
+  border: none;
+}
+
+.product-added-checkout {
+  padding: 10px 46px 10px 47px;
+  margin-right: 5.5px;
+}
+
+.product-added-continue {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  padding: 10px 31px 10px 32px;
+}
+
+.product-added-continue:hover {
+  color: var(--primary-red);
+  background-color: var(--primary-white);
+}
+
+.product-added-continue:active {
+  color: var(--special-lightgray);
+  background-color: var(--primary-white);
 }
