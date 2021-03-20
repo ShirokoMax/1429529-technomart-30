@@ -1,3 +1,5 @@
+// Modal Feedback
+
 const feedbackLink = document.querySelector('.contacts-button');
 const feedbackPopup = document.querySelector('.modal-feedback');
 const feedbackClose = feedbackPopup.querySelector('.modal-close');
@@ -54,6 +56,31 @@ window.addEventListener('keydown', event => {
       event.preventDefault();
       feedbackPopup.classList.remove('modal-show');
       feedbackPopup.classList.remove('modal-error');
+    }
+  }
+});
+
+// Modal Feedback
+
+const mapLink = document.querySelector('.contacts-map');
+const mapPopup = document.querySelector('.modal-map');
+const mapClose = mapPopup.querySelector('.modal-close');
+
+mapLink.addEventListener('click', event => {
+  event.preventDefault();
+  mapPopup.classList.add('modal-show');
+});
+
+mapClose.addEventListener('click', event => {
+  event.preventDefault();
+  mapPopup.classList.remove('modal-show');
+});
+
+window.addEventListener('keydown', event => {
+  if(event.keyCode === 27) {
+    if(mapPopup.classList.contains('modal-show')) {
+      event.preventDefault();
+      mapPopup.classList.remove('modal-show');
     }
   }
 });
