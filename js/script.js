@@ -60,7 +60,7 @@ window.addEventListener('keydown', event => {
   }
 });
 
-// Modal Feedback
+// Modal Map
 
 const mapLink = document.querySelector('.contacts-map');
 const mapPopup = document.querySelector('.modal-map');
